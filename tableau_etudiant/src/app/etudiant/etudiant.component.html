@@ -1,0 +1,40 @@
+
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <ul>
+    <h2 class="display-4">Liste des étudiants</h2>
+    <li *ngFor="let etudiant of etudiants" class="lead"  >
+    	{{etudiant.nom}}
+    </li>
+    </ul>
+  </div>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <ul>
+    <h2 class="display-4">Liste des étudiants plus de la moyenne</h2>
+    <li *ngFor="let etudiant of etudiants" class="lead"  >
+    <div *ngIf=" etudiant.moyenne>9 ">
+    	{{etudiant.nom}} avec une moyenne de {{ etudiant.moyenne }}
+    	</div>
+    </li>
+    </ul>
+  </div>
+</div>
+	
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <ul>
+	<h2 class="display-4">Liste des étudiants moins de la moyenne</h2>
+	<li  *ngFor="let etudiant of etudiants" class="lead">
+	<div *ngIf=" etudiant.moyenne<9 ">
+		{{ etudiant.nom }} avec une moyenne de {{ etudiant.moyenne }}
+		</div>
+	</li>
+	</ul>
+	</div>
+</div>
